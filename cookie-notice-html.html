@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucleus - Master AI Like a Pro</title>
+    <!-- Additional meta tags, stylesheets, etc. would go here -->
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner-inner">
+            <div class="cookie-info">
+                <div class="cookie-header">
+                    <div class="cookie-emoji">🍪</div>
+                    <h2 class="cookie-title">Ucleus Cookie Notice</h2>
+                </div>
+                <div class="cookie-date">Last Updated: May 14, 2025</div>
+                <p class="cookie-description">We use cookies to make Ucleus work smoothly and personalize your experience. By clicking "Accept," you agree to all cookies.</p>
+                
+                <h3 class="cookie-settings-title">1. What We Use</h3>
+                <table class="cookie-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie Type</th>
+                            <th>Purpose</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Essential</td>
+                            <td>Logins, payments, security</td>
+                            <td>Session</td>
+                        </tr>
+                        <tr>
+                            <td>Analytics</td>
+                            <td>Improve the App (anonymous)</td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <td>Preferences</td>
+                            <td>Remember settings (e.g., dark mode)</td>
+                            <td>1 month</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="cookie-settings-title">2. Your Choices</h3>
+                <div class="cookie-choices">
+                    <div class="cookie-choice">
+                        <span class="cookie-choice-icon">✅</span>
+                        <span>"Accept All" – Full functionality (recommended)</span>
+                    </div>
+                    <div class="cookie-choice">
+                        <span class="cookie-choice-icon">⚙️</span>
+                        <span>"Customize" – Turn off analytics/preferences</span>
+                    </div>
+                    <div class="cookie-choice">
+                        <span class="cookie-choice-icon">❌</span>
+                        <span>"Reject Non-Essential" – Basic site only</span>
+                    </div>
+                </div>
+                
+                <h3 class="cookie-settings-title">3. Third-Party Cookies</h3>
+                <div class="cookie-third-party">
+                    <ul>
+                        <li><strong>Stripe/PayPal</strong> (payment processing)</li>
+                        <li><strong>Google Analytics</strong> (anonymous traffic data)</li>
+                    </ul>
+                    <p>We don't use ads or tracking cookies.</p>
+                </div>
+                
+                <p>You can adjust via <strong>Privacy Settings</strong> in your account later.</p>
+                <p>For more information, see our <a href="cookie-policy.html" class="cookie-policy-link">Cookie Policy</a>.</p>
+            </div>
+            
+            <div class="cookie-actions">
+                <button id="accept-all-cookies" class="btn btn-primary">Accept All</button>
+                <button id="customize-cookies" class="btn btn-outline">Customize Settings</button>
+                <button id="reject-non-essential" class="btn btn-secondary">Reject Non-Essential</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cookie Settings Modal -->
+    <div id="cookie-modal" class="cookie-modal">
+        <div class="cookie-modal-content">
+            <button id="close-cookie-modal" class="cookie-modal-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            
+            <h2 class="cookie-modal-title">Cookie Preferences</h2>
+            <p>Customize your cookie preferences below. Essential cookies are required for the website to function and cannot be disabled.</p>
+            
+            <div class="cookie-preference-group">
+                <div class="cookie-preference-header">
+                    <span class="cookie-preference-title">Essential Cookies</span>
+                    <label class="cookie-switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="cookie-switch-slider"></span>
+                    </label>
+                </div>
+                <p class="cookie-preference-description">These cookies are necessary for the website to function properly. They enable core functionality such as security, account management, and payment processing.</p>
+            </div>
+            
+            <div class="cookie-preference-group">
+                <div class="cookie-preference-header">
+                    <span class="cookie-preference-title">Analytics Cookies</span>
+                    <label class="cookie-switch">
+                        <input type="checkbox" id="analytics-checkbox">
+                        <span class="cookie-switch-slider"></span>
+                    </label>
+                </div>
+                <p class="cookie-preference-description">These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve the app and user experience.</p>
+            </div>
+            
+            <div class="cookie-preference-group">
+                <div class="cookie-preference-header">
+                    <span class="cookie-preference-title">Preference Cookies</span>
+                    <label class="cookie-switch">
+                        <input type="checkbox" id="preferences-checkbox">
+                        <span class="cookie-switch-slider"></span>
+                    </label>
+                </div>
+                <p class="cookie-preference-description">These cookies enable our website to remember information that changes the way the website behaves or looks, such as your preferred language or UI settings.</p>
+            </div>
+            
+            <div class="cookie-preference-group">
+                <div class="cookie-preference-header">
+                    <span class="cookie-preference-title">Third-Party Cookies</span>
+                    <label class="cookie-switch">
+                        <input type="checkbox" id="third-party-checkbox">
+                        <span class="cookie-switch-slider"></span>
+                    </label>
+                </div>
+                <p class="cookie-preference-description">These cookies are set by third-party services used on our website, such as payment processors and analytics services. They do not include advertising cookies.</p>
+            </div>
+            
+            <div class="cookie-modal-footer">
+                <button id="save-preferences" class="btn btn-primary">Save Preferences</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Include the cookie consent JavaScript -->
+    <script src="js/cookie.js"></script>
+</body>
+</html>
